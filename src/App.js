@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Header from "./components/Header";
+import Tabs from "./components/Tabs";
+import Searchbar from "./components/Searchbar";
+import Footer from "./components/Footer";
+import Modal from "./components/Modal";
 
-function App() {
+export default function App() {
+  const [showModal, setShowModal] = useState(false);
+  const [modalInfo, setModalInfo] = useState("");
+  const [selectedType, setSelectedType] = useState("fetch");
+  const [results, setResults] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Header />
+      <Tabs selectedType={selectedType} setSelectedType={setSelectedType} />
+      <Searchbar
+        setShowModal={setShowModal}
+        setModalInfo={setModalInfo}
+        selectedType={selectedType}
+        results={results}
+        setResults={setResults}
+      />
+      <Footer />
+      <Modal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        modalInfo={modalInfo}
+      />
+    </main>
   );
 }
-
-export default App;
