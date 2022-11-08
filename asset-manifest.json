@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/anime-fetch-api/static/css/main.b4fa9d40.css",
+    "main.js": "/anime-fetch-api/static/js/main.857aa89d.js",
+    "index.html": "/anime-fetch-api/index.html",
+    "main.b4fa9d40.css.map": "/anime-fetch-api/static/css/main.b4fa9d40.css.map",
+    "main.857aa89d.js.map": "/anime-fetch-api/static/js/main.857aa89d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4fa9d40.css",
+    "static/js/main.857aa89d.js"
+  ]
+}

@@ -1,0 +1,11 @@
+* {
+  transition: all 300ms;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.opacity-on-hover:hover {
+  filter: opacity(70%);
+}
